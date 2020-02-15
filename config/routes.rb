@@ -10,6 +10,14 @@ Rails.application.routes.draw do
     confirmations:      "teachers/confirmations",
     registrations:      "teachers/registrations"
   }
-  
+
+  devise_for :students, path: 'students',
+
+  controllers:
+  { sessions:           "students/sessions",
+    passwords:          "students/passwords",
+    confirmations:      "students/confirmations",
+    registrations:      "students/registrations"
+  }  
   
 end
