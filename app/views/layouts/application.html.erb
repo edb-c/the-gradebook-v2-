@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>TheGradebook V2</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+<!-- -->
+  <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+  <link href="https://the-gradebook-postgres.herokuapp.com/stylesheets/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+
+  </head>
+
+  <body>
+    <nav class="white teal-text" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo brown-text">The Gradebook</a>
+          <div class="right hide-on-med-and-down">
+          <a class="brown-text" <%= link_to "Home     |", root_path %></a>
+<!--
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Register</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+ -->
+       </div>
+      </div>
+    </nav>
+  <!-- For Devise -->
+  <div class="devise_container">
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+  </div>
+
+  <%= yield %>
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Ethel Cofresi</h5>
+          <ul>
+            <li><class="white-text">Software Engineer Web Development</li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">The Gradebook</h5>
+          <ul>
+            <li><class="white-text">Ruby on Rails Application</li>
+          </ul>
+        </div>
+<!--
+        <div class="col l3 s12">
+          <h5 class="white-text">2019</h5>
+          <ul>
+            <li><class="white-text">Flatiron School Portfolio Project</li>
+          </ul>
+        </div>
+-->
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made with <span style="color: #e25555;">&hearts;</span> by <a class="white-text" href="http://www.ethelcofresi.com">E.Cofresi</a>
+      </div>
+  </footer>
+
+
+  <!--  Scripts  -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <%= javascript_pack_tag 'init' %>
+  </body>
+</html>
