@@ -19,5 +19,8 @@ Rails.application.routes.draw do
     confirmations:      "students/confirmations",
     registrations:      "students/registrations"
   }  
-  
+
+  resources :teacher_courses
+  resources :student_courses
+
 end
