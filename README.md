@@ -1,1 +1,1 @@
-# This is the refresh of my mvp The Gradebook.
+# This is the refresh of The Gradebook.
